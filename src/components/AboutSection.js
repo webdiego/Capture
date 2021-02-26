@@ -1,11 +1,11 @@
 //IMPORT IMG
 import home1 from '../img/home1.png'
 //Style components
-import styled from 'styled-components'
-
+// import styled from 'styled-components'
+import {ContainerStyle , DescriptionStyle, ImgStyle , HideElement} from '../StyleDefault'
 const AboutSection = ()=>{
  return(
-   <AboutStyle>
+   <ContainerStyle>
      <DescriptionStyle>
        <div className="title">
          <HideElement>
@@ -24,40 +24,11 @@ const AboutSection = ()=>{
      <ImgStyle>
        <img src={home1} alt=""/>
      </ImgStyle>
-   </AboutStyle>
+   </ContainerStyle>
  )
 }
 
-//--STYLED COMPONENTS
-const AboutStyle = styled.div`
- min-height : 90vh;
- display : flex;
- align-items: center;
- justify-content: space-between;
- padding:5rem 10rem;
- color:white;`
 
- const DescriptionStyle = styled.div`
- flex:1;
- padding-right:5rem;
- h2{
-  font-weight: 400;
- }
- `
- 
- const ImgStyle = styled.div`
- flex:1;
- overflow:hidden;
- img{
-   width:100%;
-   height:80vh;
-   object-fit:cover;
- }
- `
- const HideElement = styled.div`
-  overflow:hidden;
- `
- 
 
 
 export default AboutSection

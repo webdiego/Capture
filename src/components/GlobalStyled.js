@@ -36,6 +36,10 @@ h2{
 h3{
   color:white;
 }
+h4{
+  font-size:2rem;
+  font-weight:bold;
+}
 a{
   font-size:1.1rem;
 }
