@@ -69,7 +69,7 @@ const ServicesSection = ()=>{
 
   }
   span{
-   color:#1da1f2;
+   color:#23d997;
  }
  `
  const CardsStyle = styled.div`
@@ -77,7 +77,7 @@ const ServicesSection = ()=>{
   flex-wrap:wrap;
  ` 
  const CardStyle = styled.div`
- margin-right:5rem;
+  margin-right:2rem; 
  flex-basis:15rem;
  .icon{
    display:flex;
@@ -91,7 +91,7 @@ const ServicesSection = ()=>{
    border-radius:5px;
  }
  p{
-   font-size:1.1rem;
+   font-size:1rem;
  }
  
  ` 

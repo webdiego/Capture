@@ -1,34 +1,45 @@
 //IMPORT IMG
-import home1 from '../img/home1.png'
+import home1 from "../img/home1.png";
 //Style components
-// import styled from 'styled-components'
-import {ContainerStyle , DescriptionStyle, ImgStyle , HideElement} from '../StyleDefault'
-const AboutSection = ()=>{
- return(
-   <ContainerStyle>
-     <DescriptionStyle>
-       <div className="title">
-         <HideElement>
-           <h2>We work to make</h2>
-         </HideElement>
-         <HideElement>
-           <h2>your <span>dreams</span> come</h2>
-         </HideElement>
-         <HideElement>
-           <h2>true.</h2>
-         </HideElement>
-       </div>
-       <p>Contact us for any photography or videography ideas that you hav. We have professionals with amazing skills</p>
-       <button>Contact Us</button>
-     </DescriptionStyle>
-     <ImgStyle>
-       <img src={home1} alt=""/>
-     </ImgStyle>
-   </ContainerStyle>
- )
-}
+import {
+  ContainerStyle,
+  DescriptionStyle,
+  ImgStyle,
+  HideElement,
+} from "../StyleDefault";
+//Framer Motion
+import { motion } from "framer-motion";
+import {titleAnimation , fade , photoAnimation} from '../animation'
 
+const AboutSection = () => {
+  
+  return (
+    <ContainerStyle>
+      <DescriptionStyle>
+        <motion.div >
+          <HideElement>
+            <motion.h2 variants={titleAnimation} >We work to make</motion.h2>
+          </HideElement>
+          <HideElement>
+            <motion.h2 variants={titleAnimation}  >
+              your <span>dreams</span> come
+            </motion.h2>
+          </HideElement>
+          <HideElement>
+            <motion.h2 variants={titleAnimation} >true.</motion.h2>
+          </HideElement>
+        </motion.div>
+        <motion.p variants={fade}>
+          Contact us for any photography or videography ideas that you hav. We
+          have professionals with amazing skills
+        </motion.p>
+        <motion.button variants={fade}>Contact Us</motion.button>
+      </DescriptionStyle>
+      <ImgStyle>
+        <motion.img variants={photoAnimation} src={home1} alt="" />
+      </ImgStyle>
+    </ContainerStyle>
+  );
+};
 
-
-
-export default AboutSection
+export default AboutSection;
