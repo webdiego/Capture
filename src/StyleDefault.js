@@ -12,6 +12,7 @@ export const ContainerStyle = styled.div`
 export  const DescriptionStyle = styled.div`
  flex:1;
  padding-right:5rem;
+ z-index:2;
  h2{
   font-weight: 400;
  }
@@ -24,6 +25,7 @@ export  const DescriptionStyle = styled.div`
    width:100%;
    height:80vh;
    object-fit:cover;
+   z-index:2;
  }
  `
  export const HideElement = styled.div`

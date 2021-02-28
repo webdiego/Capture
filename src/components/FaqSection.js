@@ -1,74 +1,83 @@
-import styled from 'styled-components'
-import {ContainerStyle} from '../StyleDefault'
+import { useState } from "react";
+import styled from "styled-components";
+import { ContainerStyle } from "../StyleDefault";
+import Toggle from "./Toggle";
+import {AnimateSharedLayout} from 'framer-motion'
 
-const FaqSection = ()=>{
-
-  return(
+const FaqSection = () => {
+  return (
     <FaqStyle>
-     <h2>Any Question <span>FAQ</span></h2>
+      <h2>
+        Any Question <span>FAQ</span>
+      </h2>
+      <AnimateSharedLayout>
 
-     <div className="question">
-       <h4>How Do I Start</h4>
-       <div className="answer">
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, incidunt.</p>
-       </div>
-       <div className="faq-line"></div>
-     </div>
+      <Toggle title="How Do I Start">
+        <div className="answer">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
+            incidunt.
+          </p>
+        </div>
+      </Toggle>
+      
+      <Toggle title="Daily Schedule">
+        <div className="answer">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
+            incidunt.
+          </p>
+        </div>
+      </Toggle>
 
-     <div className="question">
-       <h4>Daily Schedule</h4>
-       <div className="answer">
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, incidunt.</p>
-       </div>
-       <div className="faq-line"></div>
 
-     </div>
 
-     <div className="question">
-       <h4>Different Payment</h4>
-       <div className="answer">
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, incidunt.</p>
-       </div>
-       <div className="faq-line"></div>
-
-     </div>
-
-     <div className="question">
-       <h4>What Products do you offer</h4>
-       <div className="answer">
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, incidunt.</p>
-       </div>
-       <div className="faq-line"></div>
-
-     </div>
-    </FaqStyle>
-  )
- }
-
- const FaqStyle = styled(ContainerStyle)`
-   display: block;
-   span{
-     display:block;
-   }
-   h2{
-     padding-bottom:2rem;
-     font-weight: 400;
-   }
-   .faq-line{
-     background:#cccccc;
-     height:.2rem;
-     margin:2rem 0rem;
-     width:100%
-   }
-   .question{
-     padding:3rem 0rem;
-     cursor:pointer;
-
-   }
-   p{
-     padding:1rem 0rem
-   }
-
- ` 
+      <Toggle title="Different Payment">
+        <div className="answer">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
+            incidunt.
+          </p>
+        </div>
+      </Toggle>
  
- export default FaqSection
+
+      <Toggle title="What Products do you offer">
+        <div className="answer">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
+            incidunt.
+          </p>
+        </div>
+      </Toggle>
+
+      </AnimateSharedLayout>
+    </FaqStyle>
+  );
+};
+
+const FaqStyle = styled(ContainerStyle)`
+  display: block;
+  span {
+    display: block;
+  }
+  h2 {
+    padding-bottom: 2rem;
+    font-weight: 400;
+  }
+  .faq-line {
+    background: #cccccc;
+    height: 0.2rem;
+    margin: 2rem 0rem;
+    width: 100%;
+  }
+  .question {
+    padding: 3rem 0rem;
+    cursor: pointer;
+  }
+  p {
+    padding: 1rem 0rem;
+  }
+`;
+
+export default FaqSection;
