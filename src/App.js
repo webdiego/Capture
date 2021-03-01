@@ -10,12 +10,15 @@ import Nav from './components/Nav'
 import {Switch , Route , useLocation} from 'react-router-dom'
 //Animation
 import {AnimatePresence} from 'framer-motion'
+import TopScroll from './components/TopScroll'
+
 function App() {
   const location = useLocation()
 
   return (
     <div className="App">
       <GlobalStyle/>
+      <TopScroll/>
       <Nav/>
       <AnimatePresence exitBeforeEnter>
 

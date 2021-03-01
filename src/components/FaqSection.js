@@ -4,9 +4,14 @@ import { ContainerStyle } from "../StyleDefault";
 import Toggle from "./Toggle";
 import {AnimateSharedLayout} from 'framer-motion'
 
+import {fade} from '../animation' 
+import {useScroll} from './useScroll'
+
+
 const FaqSection = () => {
+  const [ element, controls]= useScroll()
   return (
-    <FaqStyle>
+    <FaqStyle variants={fade} ref={element} animate={controls} initial='hidden'>
       <h2>
         Any Question <span>FAQ</span>
       </h2>

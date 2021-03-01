@@ -27,6 +27,9 @@ justify-content:space-between;
 align-items:center;
 padding:1rem 10rem;
 background-color:#282828;
+position:sticky;
+top:0;
+z-index:5;
 a{
   color:white;
   text-decoration:none;
@@ -44,6 +47,22 @@ li{
   font-size:1.2rem;
   font-weight:400;
 }
+
+@media (max-width: 1350px){
+    flex-direction:column;
+     padding:2rem 0 2rem 0rem;
+    align-self:space-between;
+    min-height:19vh;
+
+     li{
+       padding-right:2rem;
+     }
+     #logo{
+       font-size:1.8rem;
+       font-weight:bold;
+      
+     }
+  } 
 ` 
 
 export default Nav;

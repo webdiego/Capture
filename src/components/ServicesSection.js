@@ -3,16 +3,17 @@ import clock from '../img/clock.svg'
 import diaphragm from '../img/diaphragm.svg'
 import money from '../img/money.svg'
 import teamwork from '../img/teamwork.svg'
-
+//Img
 import home2 from '../img/home2.png'
 //Style Components
 import {ContainerStyle , DescriptionStyle, ImgStyle } from '../StyleDefault'
 import styled from 'styled-components'
 
-const ServicesSection = ()=>{
 
+const ServicesSection = ()=>{
+  
   return(
-    <ServicesStyle>
+    <ServicesStyle >
       <DescriptionStyle>
         <h2>High <span>quality</span> services.</h2>
         <CardsStyle>
@@ -75,6 +76,9 @@ const ServicesSection = ()=>{
  const CardsStyle = styled.div`
   display:flex;
   flex-wrap:wrap;
+  @media (max-width: 1350px){
+    justify-content:center;
+  } 
  ` 
  const CardStyle = styled.div`
   margin-right:2rem; 
